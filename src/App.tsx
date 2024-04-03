@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import "./App.css";
+import DefaultTextField from "./components/DefaultTextField";
+import Label from "./components/Label";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [value, setValue] = useState("");
+  const [isError, setIsError] = useState(false);
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Label htmlFor="email">이메일</Label>
+      <DefaultTextField
+        id="email"
+        onClick={() => setValue("")}
+        placeholder="Type something"
+        onChange={(e) => setValue(e.target.value)}
+        value={value}
+        iconPath={reactLogo}
+        alt="react-logo"
+        isError={isError}
+        children="에러 메시지가 있습니다."
+      />
+      <Label htmlFor="email">주소</Label>
+      <DefaultTextField
+        id="email"
+        onClick={() => setValue("")}
+        placeholder="Type something"
+        onChange={(e) => setValue(e.target.value)}
+        value={value}
+        iconPath={reactLogo}
+        alt="react-logo"
+        isError={isError}
+        children="에러 메시지가 있습니다."
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
