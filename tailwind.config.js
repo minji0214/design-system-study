@@ -3,6 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
+    borderRadius: {
+      "primary-button": "5px",
+      "tag-button": "17.5px",
+    },
     fontFamily: {
       body: ["Noto Sans KR"],
     },
@@ -42,6 +46,7 @@ export default {
       mono200: "#BEBEBE",
       error: "#D01E1E",
       social: "#395997",
+      "dark-opacity": "rgba(255, 255, 255, 0.1)",
     },
   },
   plugins: [],
