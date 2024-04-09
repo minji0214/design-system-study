@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {},
     borderRadius: {
+      "button-default": "5px",
       "primary-button": "5px",
       "tag-button": "17.5px",
     },
