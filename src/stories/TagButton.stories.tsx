@@ -40,7 +40,7 @@ export const Dark: Story = {
 export const Light: Story = {
   args: {
     isChecked: false,
-    theme: "light",
+    // theme: "light",
     onClick: fn(),
     children: "버튼",
   },
