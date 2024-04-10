@@ -1,8 +1,17 @@
 {
-  "name": "design-system-study",
-  "private": true,
+  "name": "minji-design-system-study",
+  "description": "Design system study with Vite, React, and Storybook",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "src/components",
+    "index.css"
+  ],
+  "main": "src/components/.tsx",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
